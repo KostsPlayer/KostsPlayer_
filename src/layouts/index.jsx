@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Loader from "./loader";
 import Navbar from "./navbar";
+import Footer from "./footer/Footer";
 import { useCursorInk } from "../hooks/useCursorInk";
 import LenisScroll from "../hooks/useLenisScroll";
 import { slideUp } from "./anim";
@@ -50,6 +51,7 @@ function Layout({ children }) {
         <LenisScroll />
         <Navbar />
         {children}
+        <Footer />
       </motion.main>
     </>
   );

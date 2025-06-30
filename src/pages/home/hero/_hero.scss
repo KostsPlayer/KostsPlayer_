@@ -2,7 +2,7 @@
 @use "../../../components/marquee/marquee" as marquee;
 
 @mixin hero() {
-  padding: 2rem h.$px-landing 0;
+  padding: 2rem h.$px-layout 0;
   display: grid;
   grid-template-columns: 1fr 44rem 0.75fr;
   min-height: 98vh;

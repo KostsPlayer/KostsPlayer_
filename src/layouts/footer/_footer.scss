@@ -1,0 +1,57 @@
+@use "../../utils/helper" as h;
+
+@mixin title() {
+  color: rgb(201, 201, 201);
+  font-size: 0.82rem;
+  font-family: h.$jetbrains-mono;
+  text-transform: uppercase;
+}
+
+@mixin footer() {
+  .footer {
+    height: 20vh;
+    background-color: #000;
+    padding: 0 h.$px-layout 1.5rem;
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 0.8fr 1fr;
+    color: #fff;
+
+    .version {
+      @include h.flex($direction: column, $align: flex-start);
+      gap: 1rem;
+
+      .title {
+        @include title();
+      }
+
+      .text {
+        font-size: 0.95rem;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .socials {
+      @include h.flex($direction: column, $align: flex-start);
+      gap: 1rem;
+      margin-left: auto;
+
+      .title {
+        @include title();
+      }
+
+      .items {
+        @include h.flex($justify: flex-start);
+        gap: 3rem;
+
+        .text {
+          font-size: 0.925rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

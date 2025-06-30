@@ -1,6 +1,7 @@
 @use "../utils/helper" as h;
 @use "./loader/loader";
 @use "./navbar/navbar" as navbar;
+@use "./footer/footer" as footer;
 @use "../components/contactInfo/contact-info";
 @use "../pages/home/home" as home;
 
@@ -23,4 +24,6 @@
   }
 
   @include navbar.navbar();
+
+  @include footer.footer();
 }

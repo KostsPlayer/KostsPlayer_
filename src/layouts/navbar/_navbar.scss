@@ -3,7 +3,7 @@
 @mixin navbar() {
   .navbar {
     @include h.flex($justify: space-between);
-    padding: 2.1rem h.$px-landing;
+    padding: 2.1rem h.$px-layout;
     font-size: 1rem;
 
     .logo {
@@ -22,26 +22,6 @@
 
       &-link {
         cursor: pointer;
-        position: relative;
-        @include h.flex($direction: column);
-
-        .indicator {
-          position: absolute;
-          width: 5px;
-          height: 5px;
-          top: 35px;
-          left: 50%;
-          background-color: #000;
-          border-radius: 50%;
-          transform: scale(0) translateX(-50%);
-          transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
-        }
-
-        &:hover {
-          .indicator {
-            transform: scale(1);
-          }
-        }
 
         &.active {
           font-family: h.$jetbrains-mono;

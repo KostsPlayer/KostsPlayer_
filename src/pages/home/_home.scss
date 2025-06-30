@@ -1,0 +1,17 @@
+@use "./hero/hero" as hero;
+@use "./brand/brand" as brand;
+@use "./project/project" as project;
+
+.home {
+  .hero {
+    @include hero.hero();
+  }
+
+  .brand {
+    @include brand.brand();
+  }
+
+  .project {
+    @include project.project();
+  }
+}

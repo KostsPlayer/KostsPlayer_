@@ -1,0 +1,21 @@
+@use "../../utils/helper" as h;
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  @include h.flex();
+  position: fixed;
+  z-index: 99;
+  background-color: #000;
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+
+    path {
+      fill: #000;
+    }
+  }
+}

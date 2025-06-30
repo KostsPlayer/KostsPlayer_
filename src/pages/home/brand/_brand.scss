@@ -1,0 +1,36 @@
+@use "../../../utils/helper" as h;
+@use "../../../components/bounceDivider/bounce-divider" as bounce-divider;
+@use "../../../components/phraseSlideUp/phrase-slide-up" as phrase-slide-up;
+@use "../../../components/roundedButton/rounded-button" as rounded-button;
+
+@mixin brand() {
+  padding: 0 h.$px-main;
+  min-height: 60vh;
+  position: relative;
+
+  @include bounce-divider.bounce-divider();
+
+  &-title {
+    font-size: 2.8rem;
+    line-height: 140%;
+    font-family: h.$jetbrains-mono;
+
+    @include phrase-slide-up.phrase-slide-up(0.8rem);
+  }
+
+  &-subtitle {
+    margin-top: 2.6rem;
+    width: 60%;
+    @include h.flex($align: flex-start, $justify: space-between);
+    gap: 3.1rem;
+
+    .text {
+      font-size: 0.95rem;
+      width: 100%;
+
+      @include phrase-slide-up.phrase-slide-up(0.3rem);
+    }
+  }
+
+  @include rounded-button.rounded-button();
+}

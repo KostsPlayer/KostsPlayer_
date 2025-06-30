@@ -1,0 +1,78 @@
+@use "../../utils/helper" as h;
+@use "../bounceDivider/bounce-divider" as bounce-divider;
+@use "../roundedButton/rounded-button" as rounded-button;
+
+.contact-info {
+  height: 100vh;
+  padding: 8rem h.$px-main 0;
+  background-color: #000;
+  color: #fff;
+
+  .title {
+    font-size: 5rem;
+    width: 50%;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .divider {
+    position: relative;
+    height: 3rem;
+
+    @include bounce-divider.bounce-divider($color: rgb(201, 201, 201));
+
+    &-button {
+      @include rounded-button.rounded-button(
+        $top: -192%,
+        $left: 13%,
+        $bg-color: #455ce9,
+        $text-size: 1.05rem,
+        $width-rounded: 11.45rem,
+        $height-rounded: 11.45rem,
+        $text-weight: 200,
+        $conflict: true
+      );
+    }
+  }
+
+  .info {
+    @include h.flex();
+    height: 11rem;
+
+    .email {
+      width: 100%;
+      position: relative;
+
+      @include rounded-button.rounded-button(
+        $top: 50%,
+        $left: 22%,
+        $width-rounded: 17rem,
+        $height-rounded: 4.4rem,
+        $b-radius: 50vw,
+        $border: 1px solid rgb(201, 201, 201),
+        $bg-color: transparent,
+        $text-color: #fff,
+        $text-size: 1.05rem
+      );
+    }
+
+    .phone {
+      width: 100%;
+      position: relative;
+
+      @include rounded-button.rounded-button(
+        $top: 50%,
+        $left: -31%,
+        $width-rounded: 14rem,
+        $height-rounded: 4.4rem,
+        $b-radius: 50vw,
+        $border: 1px solid rgb(201, 201, 201),
+        $bg-color: transparent,
+        $text-color: #fff,
+        $text-size: 1.05rem
+      );
+    }
+  }
+}

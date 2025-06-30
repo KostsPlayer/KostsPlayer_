@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Shopify Bliss",
+    "role": "Fullstack Dev",
+    "src": "c2montreal.png",
+    "color": "#000000"
+  },
+  {
+    "title": "TailBuddy",
+    "role": "Frontend Dev",
+    "src": "officestudio.png",
+    "color": "#8C8C8C"
+  },
+  {
+    "title": "Stock Price",
+    "role": "Data Scientist",
+    "src": "silencio.png",
+    "color": "#706D63"
+  },
+  {
+    "title": "Monolita",
+    "role": "Fullstack Dev",
+    "src": "locomotive.png",
+    "color": "#EFE8D3"
+  }
+]

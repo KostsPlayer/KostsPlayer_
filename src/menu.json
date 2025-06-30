@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "content1": "Me is fullstack developer, software engineer, and data scientist ———",
+    "content2": "——— focused on web development and data analysis to create <span>optimal digital solutions.</span>",
+    "project": {
+      "image": [
+        "pexels-gleb-lucky-77753534-9109231.jpg",
+        "pexels-ionela-mat-268382825-27180805.jpg",
+        "pexels-pixabay-210158.jpg",
+        "pexels-thatwasowzm-2046746382-29182343.jpg"
+      ],
+      "name": ["Tailbuddy", "Shopify Bliss", "PBMP", "Pempek Joli"]
+    }
+  },
+  {
+    "id": 2,
+    "name": "About",
+    "content1": "Muhammad Azka Nuril Islami as KostsPlayer, berasal dari Metropolitan Lumajang, Jawa Timur, Indonesia",
+    "content2": "menempuh pendidikan Diploma IV di Universitas Logistik & Bisnis Internasional (ULBI), Bandung, Indonesia",
+    "image": "pexels-ionela-mat-268382825-27180805.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Contact",
+    "content1": [
+      {
+        "name": "Email"
+      },
+      {
+        "name": "Phone"
+      },
+      {
+        "name": "Github"
+      },
+      {
+        "name": "Instagram"
+      }
+    ],
+    "content2": [
+      {
+        "name": "azka.nuril070@gmail.com"
+      },
+      {
+        "name": "+62 823 3410 0715"
+      },
+      {
+        "name": "KostsPlayer"
+      },
+      {
+        "name": "aazkanuril"
+      }
+    ],
+    "image": "pexels-thatwasowzm-2046746382-29182343.jpg"
+  }
+]

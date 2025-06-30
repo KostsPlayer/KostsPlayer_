@@ -1,0 +1,50 @@
+@use "../../utils/helper" as h;
+
+@mixin slider-project() {
+  .modal-container {
+    height: 370px;
+    width: 400px;
+    position: absolute;
+    background-color: #fff;
+    overflow: hidden;
+    pointer-events: none;
+    @include h.flex();
+    z-index: 20;
+  }
+
+  .modal-slider {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .modal {
+    height: 100%;
+    width: 100%;
+    @include h.flex();
+
+    img {
+      height: auto;
+    }
+  }
+
+  .cursor,
+  .cursor-label {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #455ce9;
+    color: #fff;
+    position: absolute;
+    z-index: 23;
+    @include h.flex();
+    font-size: 14px;
+    font-weight: 300;
+    pointer-events: none;
+  }
+
+  .cursor-label {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,59 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$jetbrains-mono: "JetBrains Mono", serif;
+$space-mono: "Space Mono", serif;
+
+$px-landing: 3.1rem;
+$px-main: 12.4rem;
+
+@mixin flex(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $start: false,
+  $end: false
+) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  } @else if $end {
+    justify-content: flex-end;
+    align-items: flex-end;
+  } @else {
+    justify-content: $justify;
+    align-items: $align;
+  }
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin line-hover($time: 0.45s, $h: 1.5px, $bottom: -0.2rem) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: $h solid #000;
+    bottom: $bottom;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform math.div($time, 1.5) ease;
+    transform-origin: left;
+  }
+
+  &:hover {
+    &::after {
+      transition: transform $time ease-out;
+      transform: scaleX(1);
+    }
+  }
+}

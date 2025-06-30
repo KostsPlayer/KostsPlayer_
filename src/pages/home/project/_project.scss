@@ -1,0 +1,89 @@
+@use "../../../utils/helper" as h;
+@use "../../../components/sliderProject/slider-project" as slider-project;
+@use "../../../components/roundedButton/rounded-button" as rounded-button;
+
+$px-outer: 7.1rem;
+
+@mixin project() {
+  padding: 0 $px-outer;
+
+  .note {
+    font-family: h.$jetbrains-mono;
+    color: darkgray;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0 0 3.4rem 5.3rem;
+  }
+
+  @include slider-project.slider-project();
+
+  .content {
+    width: 100%;
+    @include h.flex($justify: space-between);
+    padding: 2.3rem calc(h.$px-main - $px-outer) 3.4rem;
+    border-top: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    h2 {
+      font-size: 5rem;
+      font-weight: 400;
+      transition: all 0.4s;
+    }
+
+    p {
+      transition: all 0.4s;
+      font-weight: 300;
+      font-family: h.$jetbrains-mono;
+    }
+
+    &.last {
+      border-bottom: 1px solid rgb(201, 201, 201);
+    }
+
+    &:hover {
+      opacity: 0.5;
+
+      h2 {
+        transform: translateX(-1rem);
+      }
+
+      p {
+        transform: translateX(1rem);
+      }
+    }
+  }
+
+  .more {
+    position: relative;
+    height: 8rem;
+
+    @include rounded-button.rounded-button(
+      $top: 100%,
+      $left: 50%,
+      $width-rounded: 13rem,
+      $height-rounded: 5rem,
+      $b-radius: 50vw,
+      $border: 1px solid rgb(201, 201, 201),
+      $bg-color: transparent,
+      $text-color: #000,
+      $text-size: 1.15rem
+    );
+  }
+
+  .circle-container {
+    position: relative;
+    margin-top: 4rem;
+
+    .circle {
+      height: 900%;
+      width: 120%;
+      left: -10%;
+      border-radius: 0 0 50% 50%;
+      background-color: white;
+      z-index: 1;
+      position: absolute;
+      box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+    }
+  }
+}

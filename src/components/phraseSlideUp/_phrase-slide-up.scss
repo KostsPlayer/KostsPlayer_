@@ -1,0 +1,11 @@
+@mixin phrase-slide-up($m-right: 0.4rem) {
+  .mask {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+  }
+
+  span {
+    margin-right: $m-right;
+  }
+}

@@ -1,0 +1,72 @@
+@use "../../utils/helper" as h;
+
+@mixin rounded-button(
+  $top: 84%,
+  $left: 66%,
+  $width-rounded: 11.8rem,
+  $height-rounded: 11.8rem,
+  $b-radius: 50%,
+  $border: none,
+  $width-text: 100%,
+  $bg-color: #000,
+  $text-color: #fff,
+  $text-size: 1.2rem,
+  $text-weight: 300,
+  $conflict: false
+) {
+  .rounded-button-wrapper {
+    position: absolute; // Menjaga posisi absolut seperti sebelumnya
+    top: $top;
+    left: $left;
+    transform: translate(-50%, -50%); // Untuk pusatkan
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+    width: $width-rounded;
+    height: $height-rounded;
+
+    @if $conflict {
+      z-index: 2;
+    }
+  }
+
+  .rounded-button {
+    position: relative; // Sebelumnya absolute, sekarang relative ke wrapper
+    width: 100%;
+    height: 100%;
+    border-radius: $b-radius;
+    background-color: $bg-color;
+    color: $text-color;
+    border: $border;
+    @include h.flex();
+    cursor: pointer;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+
+    span {
+      font-family: h.$jetbrains-mono;
+      position: relative;
+      z-index: 1;
+      font-size: $text-size;
+      font-weight: $text-weight;
+      width: $width-text;
+      text-align: center;
+      @include h.flex();
+      transition: color 0.2s ease-out 0.25s;
+    }
+
+    &:hover {
+      span {
+        color: #fff;
+        transition: color 0.2s ease-out 0.3s;
+      }
+    }
+
+    .circle {
+      width: 100%;
+      height: 150%;
+      position: absolute;
+      border-radius: 50%;
+      top: 100%;
+    }
+  }
+}

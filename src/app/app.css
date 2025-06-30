@@ -1,0 +1,673 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden auto;
+  font-family: "Space Mono", serif;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  html,
+  body {
+    overflow-y: auto;
+  }
+}
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #000;
+}
+.loader svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+.loader svg path {
+  fill: #000;
+}
+
+.contact-info {
+  height: 100vh;
+  padding: 8rem 12.4rem 0;
+  background-color: #000;
+  color: #fff;
+}
+.contact-info .title {
+  font-size: 5rem;
+  width: 50%;
+}
+.contact-info .title span {
+  font-weight: 600;
+}
+.contact-info .divider {
+  position: relative;
+  height: 3rem;
+}
+.contact-info .divider .bounce-divider {
+  height: 1px;
+  width: 100%;
+  position: relative;
+  margin: 3.6rem 0 3.4rem;
+}
+.contact-info .divider .bounce-divider svg {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: -150px;
+}
+.contact-info .divider .bounce-divider svg path {
+  stroke: rgb(201, 201, 201);
+  stroke-width: 1px;
+  fill: none;
+}
+.contact-info .divider .bounce-divider .box {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  top: -20px;
+  z-index: 1;
+}
+.contact-info .divider .bounce-divider .box:hover {
+  height: 300px;
+  top: -150px;
+}
+.contact-info .divider-button .rounded-button-wrapper {
+  position: absolute;
+  top: -192%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  width: 11.45rem;
+  height: 11.45rem;
+  z-index: 2;
+}
+.contact-info .divider-button .rounded-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #455ce9;
+  color: #fff;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+.contact-info .divider-button .rounded-button span {
+  font-family: "JetBrains Mono", serif;
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+  font-weight: 200;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease-out 0.25s;
+}
+.contact-info .divider-button .rounded-button:hover span {
+  color: #fff;
+  transition: color 0.2s ease-out 0.3s;
+}
+.contact-info .divider-button .rounded-button .circle {
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  border-radius: 50%;
+  top: 100%;
+}
+.contact-info .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 11rem;
+}
+.contact-info .info .email {
+  width: 100%;
+  position: relative;
+}
+.contact-info .info .email .rounded-button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  width: 17rem;
+  height: 4.4rem;
+}
+.contact-info .info .email .rounded-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50vw;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgb(201, 201, 201);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+.contact-info .info .email .rounded-button span {
+  font-family: "JetBrains Mono", serif;
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease-out 0.25s;
+}
+.contact-info .info .email .rounded-button:hover span {
+  color: #fff;
+  transition: color 0.2s ease-out 0.3s;
+}
+.contact-info .info .email .rounded-button .circle {
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  border-radius: 50%;
+  top: 100%;
+}
+.contact-info .info .phone {
+  width: 100%;
+  position: relative;
+}
+.contact-info .info .phone .rounded-button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: -31%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  width: 14rem;
+  height: 4.4rem;
+}
+.contact-info .info .phone .rounded-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50vw;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgb(201, 201, 201);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+.contact-info .info .phone .rounded-button span {
+  font-family: "JetBrains Mono", serif;
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease-out 0.25s;
+}
+.contact-info .info .phone .rounded-button:hover span {
+  color: #fff;
+  transition: color 0.2s ease-out 0.3s;
+}
+.contact-info .info .phone .rounded-button .circle {
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  border-radius: 50%;
+  top: 100%;
+}
+
+.home .hero {
+  padding: 2rem 3.1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 44rem 0.75fr;
+  min-height: 98vh;
+  position: relative;
+}
+.home .hero-content {
+  width: 100%;
+  height: 100%;
+}
+.home .hero-content .content-text {
+  width: 19rem;
+}
+.home .hero-image {
+  position: relative;
+  width: 44rem;
+  height: 32.7rem;
+  overflow: hidden;
+}
+.home .hero-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  visibility: hidden;
+}
+.home .hero-image img.active {
+  filter: grayscale(1);
+  visibility: visible;
+  transition: filter 0.4s ease-out;
+}
+.home .hero-image img.active:hover {
+  filter: grayscale(0);
+  transition: filter 0.4s ease-in;
+}
+.home .hero-marquee {
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+}
+.home .hero-marquee-marquee {
+  position: relative;
+  white-space: nowrap;
+  mix-blend-mode: difference;
+}
+.home .hero-marquee-marquee span {
+  text-transform: lowercase;
+  font-size: 20rem;
+  position: relative;
+  padding-right: 6px;
+  color: #fff;
+  display: inline-block;
+  line-height: 155%;
+}
+.home .hero-marquee-marquee span:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.home .brand {
+  padding: 0 12.4rem;
+  min-height: 60vh;
+  position: relative;
+}
+.home .brand .bounce-divider {
+  height: 1px;
+  width: 100%;
+  position: relative;
+  margin: 3.6rem 0 3.4rem;
+}
+.home .brand .bounce-divider svg {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: -150px;
+}
+.home .brand .bounce-divider svg path {
+  stroke: #000;
+  stroke-width: 1px;
+  fill: none;
+}
+.home .brand .bounce-divider .box {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  top: -20px;
+  z-index: 1;
+}
+.home .brand .bounce-divider .box:hover {
+  height: 300px;
+  top: -150px;
+}
+.home .brand-title {
+  font-size: 2.8rem;
+  line-height: 140%;
+  font-family: "JetBrains Mono", serif;
+}
+.home .brand-title .mask {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+}
+.home .brand-title span {
+  margin-right: 0.8rem;
+}
+.home .brand-subtitle {
+  margin-top: 2.6rem;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3.1rem;
+}
+.home .brand-subtitle .text {
+  font-size: 0.95rem;
+  width: 100%;
+}
+.home .brand-subtitle .text .mask {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+}
+.home .brand-subtitle .text span {
+  margin-right: 0.3rem;
+}
+.home .brand .rounded-button-wrapper {
+  position: absolute;
+  top: 84%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  width: 11.8rem;
+  height: 11.8rem;
+}
+.home .brand .rounded-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+.home .brand .rounded-button span {
+  font-family: "JetBrains Mono", serif;
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease-out 0.25s;
+}
+.home .brand .rounded-button:hover span {
+  color: #fff;
+  transition: color 0.2s ease-out 0.3s;
+}
+.home .brand .rounded-button .circle {
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  border-radius: 50%;
+  top: 100%;
+}
+.home .project {
+  padding: 0 7.1rem;
+}
+.home .project .note {
+  font-family: "JetBrains Mono", serif;
+  color: darkgray;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 0 3.4rem 5.3rem;
+}
+.home .project .modal-container {
+  height: 370px;
+  width: 400px;
+  position: absolute;
+  background-color: #fff;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.home .project .modal-slider {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.home .project .modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.home .project .modal img {
+  height: auto;
+}
+.home .project .cursor,
+.home .project .cursor-label {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #455ce9;
+  color: #fff;
+  position: absolute;
+  z-index: 23;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  pointer-events: none;
+}
+.home .project .cursor-label {
+  background-color: transparent;
+}
+.home .project .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3rem 5.3rem 3.4rem;
+  border-top: 1px solid rgb(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.home .project .content h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  transition: all 0.4s;
+}
+.home .project .content p {
+  transition: all 0.4s;
+  font-weight: 300;
+  font-family: "JetBrains Mono", serif;
+}
+.home .project .content.last {
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+.home .project .content:hover {
+  opacity: 0.5;
+}
+.home .project .content:hover h2 {
+  transform: translateX(-1rem);
+}
+.home .project .content:hover p {
+  transform: translateX(1rem);
+}
+.home .project .more {
+  position: relative;
+  height: 8rem;
+}
+.home .project .more .rounded-button-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  width: 13rem;
+  height: 5rem;
+}
+.home .project .more .rounded-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50vw;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid rgb(201, 201, 201);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+.home .project .more .rounded-button span {
+  font-family: "JetBrains Mono", serif;
+  position: relative;
+  z-index: 1;
+  font-size: 1.15rem;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease-out 0.25s;
+}
+.home .project .more .rounded-button:hover span {
+  color: #fff;
+  transition: color 0.2s ease-out 0.3s;
+}
+.home .project .more .rounded-button .circle {
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  border-radius: 50%;
+  top: 100%;
+}
+.home .project .circle-container {
+  position: relative;
+  margin-top: 4rem;
+}
+.home .project .circle-container .circle {
+  height: 900%;
+  width: 120%;
+  left: -10%;
+  border-radius: 0 0 50% 50%;
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+  box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+}
+
+.layout {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+.layout .ink-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 14;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 100%;
+  height: inherit;
+}
+.layout .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.1rem 3.1rem;
+  font-size: 1rem;
+}
+.layout .navbar .logo {
+  font-family: "JetBrains Mono", serif;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.layout .navbar .time {
+  pointer-events: none;
+}
+.layout .navbar .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3.6rem;
+}
+.layout .navbar .menu-link {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.layout .navbar .menu-link .indicator {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 35px;
+  left: 50%;
+  background-color: #000;
+  border-radius: 50%;
+  transform: scale(0) translateX(-50%);
+  transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.layout .navbar .menu-link:hover .indicator {
+  transform: scale(1);
+}
+.layout .navbar .menu-link.active {
+  font-family: "JetBrains Mono", serif;
+  font-weight: 500;
+}

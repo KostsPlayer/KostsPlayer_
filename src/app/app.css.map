@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "../utils/variable.scss",
+    "app.scss"
+  ],
+  "names": [],
+  "mappings": "AAAQ;ACER;AAAA;AAAA;EAGE;EACA;EACA;;;AAGF;EACE,aDRW;ECSX;EACA;EACA",
+  "file": "app.css"
+}

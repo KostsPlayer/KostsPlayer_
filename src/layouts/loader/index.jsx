@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { slideUp, getCurve } from "./anim";
+import { slideDown, slideUp, getCurveUp, getCurveDown } from "./anim";
 
 function Loader() {
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
@@ -9,11 +9,11 @@ function Loader() {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
-  const curve = getCurve(dimension);
+  const curve = getCurveUp(dimension);
 
   return (
     <motion.div
-      variants={slideUp}
+      variants={slideUp }
       initial="initial"
       exit="exit"
       className="loader"
@@ -24,6 +24,7 @@ function Loader() {
             <motion.path
               variants={curve}
               initial="initial"
+              animate="initial"
               exit="exit"
             ></motion.path>
           </svg>

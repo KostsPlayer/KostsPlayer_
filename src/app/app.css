@@ -39,6 +39,7 @@ body::-webkit-scrollbar {
 .loader svg {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: calc(100% + 300px);
 }
@@ -163,6 +164,7 @@ body::-webkit-scrollbar {
   transition: transform 0.1s ease-out;
   width: 17rem;
   height: 4.4rem;
+  z-index: 2;
 }
 .contact-info .info .email .rounded-button {
   position: relative;
@@ -218,6 +220,7 @@ body::-webkit-scrollbar {
   transition: transform 0.1s ease-out;
   width: 14rem;
   height: 4.4rem;
+  z-index: 2;
 }
 .contact-info .info .phone .rounded-button {
   position: relative;

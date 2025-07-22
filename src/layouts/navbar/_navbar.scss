@@ -13,21 +13,21 @@
     }
 
     .time {
-      pointer-events: none;
+      // pointer-events: none;
     }
 
-    .menu {
-      @include h.flex();
-      gap: 3.6rem;
+    // .menu {
+    //   @include h.flex();
+    //   gap: 3.6rem;
 
-      &-link {
-        cursor: pointer;
+    //   &-link {
+    //     cursor: pointer;
 
-        &.active {
-          font-family: h.$jetbrains-mono;
-          font-weight: 500;
-        }
-      }
-    }
+    //     &.active {
+    //       font-family: h.$jetbrains-mono;
+    //       font-weight: 500;
+    //     }
+    //   }
+    // }
   }
 }

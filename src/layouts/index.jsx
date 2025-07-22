@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Loader from "./loader";
@@ -23,24 +24,32 @@ function Layout({ children }) {
 
   const canvasRef = useCursorInk(canvasSize);
 
+  const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    setIsLoading(true);
+    document.body.style.cursor = "wait";
+
+    const timeout = setTimeout(() => {
       setIsLoading(false);
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
-    }, 300);
-  }, []);
+    }, 300); // waktu loader tampil
+
+    return () => clearTimeout(timeout); // bersihkan timeout saat pindah halaman
+  }, [location.pathname]);
 
   return (
     <>
       <AnimatePresence mode="wait">{isLoading && <Loader />}</AnimatePresence>
+
       <motion.main
+        key={location.pathname}
         variants={slideUp}
         initial="initial"
         animate="enter"
-        className={`layout ${isLoading ? " loading" : ""}`}
+        className="layout"
       >
         <canvas
           ref={canvasRef}

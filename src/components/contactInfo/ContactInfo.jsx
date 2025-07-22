@@ -25,13 +25,13 @@ function ContactInfo() {
 
       <div className="info">
         <div className="email">
-          <RoundedButton angleX={0.15} angleY={0.15}>
+          <RoundedButton angleX={0.2} angleY={0.2}>
             <span>playerskost@gmail.com</span>
           </RoundedButton>
         </div>
 
         <div className="phone">
-          <RoundedButton angleX={0.15} angleY={0.15}>
+          <RoundedButton angleX={0.2} angleY={0.2}>
             <span>+62 822 2541 4643</span>
           </RoundedButton>
         </div>

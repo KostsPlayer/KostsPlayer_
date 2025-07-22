@@ -1,18 +1,18 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import useTime from "../../hooks/useTime";
 import Magnetic from "../../hooks/useMagnetic";
-import menu from "../../data/navbar.json";
+// import menu from "../../data/navbar.json";
 
 function Navbar() {
   const time = useTime();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div className="navbar">
       <Magnetic className="logo">kostsplayer</Magnetic>
-      <div className="time">{time} (Bandung)</div>
-      <div className="menu">
+      <Magnetic className="time">{time} (Bandung)</Magnetic>
+      {/* <div className="menu">
         {menu
           .filter((item) => item.name)
           .map((data) => {
@@ -31,7 +31,7 @@ function Navbar() {
               </Magnetic>
             );
           })}
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -16,7 +16,7 @@ function ContactInfo() {
             backgroundColor="#334bd3"
             activeParallax={true}
             axis="x"
-            speed={0.27}
+            speed={-0.27}
           >
             <span>Get it touch</span>
           </RoundedButton>

@@ -1,5 +1,6 @@
 import { useState, Fragment, useRef, useCallback } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import SliderProject from "../../../components/sliderProject";
 import RoundedButton from "../../../components/roundedButton";
@@ -38,14 +39,20 @@ function Project() {
           const isLast = index === projectsData.length - 1;
           return (
             <Fragment key={index}>
-              <div
+              <Link
                 onMouseEnter={(e) => handleModal(true, index, e)}
                 onMouseLeave={(e) => handleModal(false, index, e)}
                 className={`content ${isLast ? "last" : ""}`}
+                to={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <h2>{project.title}</h2>
-                <p>{project.role}</p>
-              </div>
+                <div className="text">
+                  <p>{project.role}</p>
+                  <p>{project.year}</p>
+                </div>
+              </Link>
             </Fragment>
           );
         })}

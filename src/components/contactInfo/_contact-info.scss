@@ -26,7 +26,8 @@
     &-button {
       @include rounded-button.rounded-button(
         $top: -192%,
-        $left: 13%,
+        // $left: 13%,
+        $left: 130%,
         $bg-color: #455ce9,
         $text-size: 1.05rem,
         $width-rounded: 11.45rem,

@@ -2,25 +2,49 @@
   {
     "title": "Shopify Bliss",
     "role": "Fullstack Dev",
-    "src": "c2montreal.png",
-    "color": "#000000"
-  },
-  {
-    "title": "TailBuddy",
-    "role": "Frontend Dev",
-    "src": "officestudio.png",
-    "color": "#8C8C8C"
-  },
-  {
-    "title": "Stock Price",
-    "role": "Data Scientist",
-    "src": "silencio.png",
-    "color": "#706D63"
+    "src": "shopify-bliss-new.png",
+    "color": "#706D63",
+    "link": "https://shopify-bliss.vercel.app/",
+    "year": 2025
   },
   {
     "title": "Monolita",
     "role": "Fullstack Dev",
-    "src": "locomotive.png",
-    "color": "#EFE8D3"
+    "src": "monolita.png",
+    "color": "#8C8C8C",
+    "link": "https://monolita.vercel.app/",
+    "year": 2024
+  },
+  {
+    "title": "TailBuddy",
+    "role": "Frontend Dev",
+    "src": "tailbuddy.png",
+    "color": "#EFE8D3",
+    "link": "https://tailbuddy.vercel.app/",
+    "year": 2025
+  },
+  {
+    "title": "Nabil",
+    "role": "Fullstack Dev",
+    "src": "nabil.png",
+    "color": "#706D63",
+    "link": "https://nabil-seven.vercel.app/",
+    "year": 2025
+  },
+  {
+    "title": "Sidigs",
+    "role": "Fullstack Dev",
+    "src": "sidigs.png",
+    "color": "#8C8C8C",
+    "link": "https://sidigs.com/",
+    "year": 2025
+  },
+  {
+    "title": "Stock Price",
+    "role": "Data Scientist",
+    "src": "stock-price.png",
+    "color": "#EFE8D3",
+    "link": "https://github.com/KostsPlayer/tugas-besar-datamining-kelompok7",
+    "year": 2025
   }
 ]
